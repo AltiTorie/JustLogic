@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="alpha.net.com.altitorie.justlogic">
+
+    <uses-feature android:name="android.hardware.camera2" />
+    <uses-permission android:name="android.permission.CAMERA2" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/just_logic_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/just_logic_icon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Activities.GameFinishedActivity"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="nosensor" />
+        <activity
+            android:name=".Activities.ChallengeDicesActivity"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="nosensor" />
+        <activity
+            android:name=".Activities.ChallengeGolfActivity"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="nosensor" />
+        <activity
+            android:name=".Activities.ChallengeSleepActivity"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="nosensor" />
+        <activity
+            android:name=".Activities.ChallengeEquationActivity"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="nosensor" />
+        <activity
+            android:name=".SettingsActivity"
+            android:screenOrientation="nosensor" />
+        <activity
+            android:name=".Activities.ChallengeCandleBlowActivity"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="nosensor" />
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="nosensor">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+
+
+</manifest>

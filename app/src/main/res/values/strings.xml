@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">JustLogic</string>
+    <string name="app_title">Just Logic</string>
+    <string name="candle_blow_text">Blow off this candle!</string>
+    <string name="equation_text">Solve the equation</string>
+    <string name="dices_text">Help me get more!</string>
+    <string name="challenge_sleeping_text">He wants to go to sleep! Shut down the lights!</string>
+    <string name="golf_text">Let\'s play some golf!</string>
+    <string name="challenge_finished_text">CONGRATULATIONS!</string>
+    <string name="gameFinished_text_checkAuthor">Check out About Author section in Options!</string>
+</resources>
