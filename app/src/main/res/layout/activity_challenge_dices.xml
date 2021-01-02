@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.ChallengeDicesActivity">
+
+    <ImageView
+        android:id="@+id/dices_friendlyDicesImage"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:layout_marginBottom="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/dices_friendImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/dices_friendly_lose" />
+
+    <TextView
+        android:id="@+id/dices_textId"
+        android:layout_width="404dp"
+        android:layout_height="51dp"
+        android:autoSizeTextType="uniform"
+        android:text="@string/dices_text"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/dices_friendImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dices_enemyImage" />
+
+    <ImageView
+        android:id="@+id/dices_enemyDicesImage"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:layout_marginTop="75dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/dices_enemyImage"
+        app:layout_constraintTop_toBottomOf="@+id/candleBlow_answerButton"
+        app:srcCompat="@drawable/dices_enemy" />
+
+    <ImageView
+        android:id="@+id/dices_friendImage"
+        android:layout_width="195dp"
+        android:layout_height="251dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/dices_sad_friend" />
+
+    <ImageView
+        android:id="@+id/dices_enemyImage"
+        android:layout_width="195dp"
+        android:layout_height="251dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/candleBlow_menuButton"
+        app:srcCompat="@drawable/bad_guy" />
+
+    <ImageButton
+        android:id="@+id/candleBlow_answerButton"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:onClick="showAnswerDialog"
+        android:scaleType="centerInside"
+        android:src="@drawable/answer_icon"
+        app:layout_constraintEnd_toStartOf="@+id/candleBlow_hintButton"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/candleBlow_hintButton"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:scaleType="centerInside"
+        android:src="@drawable/hint"
+        android:onClick="showHintDialog"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/candleBlow_menuButton"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:scaleType="centerInside"
+        android:src="@drawable/gear_icon"
+        android:onClick="showMenuDialog"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
