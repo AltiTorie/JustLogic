@@ -7,8 +7,8 @@ import android.view.View;
 
 import java.util.logging.Logger;
 
-import alpha.net.com.altitorie.justlogic.Activities.Challenges.Challenge;
 import alpha.net.com.altitorie.justlogic.Activities.Challenges.ChallengeClass;
+import alpha.net.com.altitorie.justlogic.Settings.SettingsActivity;
 import androidx.appcompat.app.AppCompatActivity;
 
 
@@ -24,11 +24,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void runChallenge(View view) {
-        runChallengeCandleBlowActivity(view);
-    }
-
-    public void runChallengeCandleBlowActivity(View view) {
-        logger.info("next challenge enum -> " + c.next());
+        setupNextChallenge();
         final Intent intent = new Intent(this, c.next());
         startActivity(intent);
     }
@@ -39,12 +35,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setup() {
+        setupNextChallenge();
+    }
+
+
+    private void setupNextChallenge(){
         SharedPreferences pref = getApplicationContext().getSharedPreferences("AppPreferences", MODE_PRIVATE);
         String nc = pref.getString("current_challenge", "NONE");
-        logger.info("current challeng -> " + nc);
         c = ChallengeClass.valueOf(nc);
-        logger.info("curr challenge enum -> " + c);
-
     }
 
 }

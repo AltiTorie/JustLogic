@@ -2,12 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="alpha.net.com.altitorie.justlogic">
 
-    <uses-feature android:name="android.hardware.camera2" />
-    <uses-permission android:name="android.permission.CAMERA2" />
-    <uses-permission android:name="android.permission.RECORD_AUDIO" />
-
-    <uses-permission android:name="android.permission.CAMERA" />
-
     <application
         android:allowBackup="true"
         android:icon="@drawable/just_logic_icon"
@@ -15,7 +9,17 @@
         android:roundIcon="@drawable/just_logic_icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activities.GameFinishedActivity"
+        <activity
+            android:name=".SplashScreenActivity"
+            android:screenOrientation="nosensor">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activities.GameFinishedActivity"
             android:parentActivityName=".MainActivity"
             android:screenOrientation="nosensor" />
         <activity
@@ -35,7 +39,7 @@
             android:parentActivityName=".MainActivity"
             android:screenOrientation="nosensor" />
         <activity
-            android:name=".SettingsActivity"
+            android:name=".Settings.SettingsActivity"
             android:screenOrientation="nosensor" />
         <activity
             android:name=".Activities.ChallengeCandleBlowActivity"
@@ -44,11 +48,7 @@
         <activity
             android:name=".MainActivity"
             android:screenOrientation="nosensor">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <meta-data
@@ -56,6 +56,11 @@
             android:resource="@array/preloaded_fonts" />
     </application>
 
+    <uses-feature android:name="android.hardware.camera2" />
 
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-permission android:name="android.permission.CAMERA2" />
 
 </manifest>

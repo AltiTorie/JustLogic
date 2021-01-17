@@ -8,4 +8,6 @@
     <string name="golf_text">Let\'s play some golf!</string>
     <string name="challenge_finished_text">CONGRATULATIONS!</string>
     <string name="gameFinished_text_checkAuthor">Check out About Author section in Options!</string>
+    <string name="made_by_info">Made by Arkadiusz Stepniak</string>
+
 </resources>

@@ -134,22 +134,18 @@ public class ChallengeGolfActivity extends Challenge implements ChallengeIterato
         ImageView image = findViewById(R.id.golf_ballImage);
         ConstraintLayout.LayoutParams params = (ConstraintLayout.LayoutParams) image.getLayoutParams();
         if (rollDeg < -5 && rollDeg > -150) {
-            logger.info("<-------- LEFT");
-            if (params.horizontalBias > -0.90) {
+            if (params.horizontalBias > 0.05) {
                 params.horizontalBias += -0.01f;
                 image.setLayoutParams(params);
             }
         }
         if (rollDeg > 5 && rollDeg < 150) {
-            logger.info("RIGHT ------->");
             params.horizontalBias += 0.01f;
             image.setLayoutParams(params);
             if (params.horizontalBias >= FINAL_HORIZONTAL_BIAS) {
                 endChallenge();
             }
         }
-
-
     }
 
 
